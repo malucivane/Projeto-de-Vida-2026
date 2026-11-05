@@ -1,7 +1,10 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Objetivos do Ano</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -29,34 +32,94 @@
         </div>
 
         <div class="card">
+
             <h3 id="tituloObjetivo">Frequentar academia</h3>
 
-            <p class="tempo-texto">TEMPO PARA COMPLETAR OBJETIVO</p>
+            <!-- CONTADOR REGRESSIVO ORIGINAL -->
+            <div id="contadorRegressivo">
+                <p class="tempo-texto">TEMPO PARA COMPLETAR OBJETIVO</p>
 
-            <div class="contador">
-                <div>
-                    <span id="dias">0</span>
-                    <p>dias</p>
-                </div>
+                <div class="contador">
+                    <div>
+                        <span id="dias">0</span>
+                        <p>dias</p>
+                    </div>
 
-                <div>
-                    <span id="horas">0</span>
-                    <p>horas</p>
-                </div>
+                    <div>
+                        <span id="horas">0</span>
+                        <p>horas</p>
+                    </div>
 
-                <div>
-                    <span id="minutos">0</span>
-                    <p>min</p>
-                </div>
+                    <div>
+                        <span id="minutos">0</span>
+                        <p>min</p>
+                    </div>
 
-                <div>
-                    <span id="segundos">0</span>
-                    <p>seg</p>
+                    <div>
+                        <span id="segundos">0</span>
+                        <p>seg</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- NOVO PAINEL DA APOSENTADORIA -->
+            <div id="painelAposentadoria" style="display:none;">
+
+                <h2>🏁 FOI DADA A LARGADA!</h2>
+
+                <p class="tempo-texto">
+                    PROTOCOLO DA FELICIDADE Nº
+                </p>
+
+                <input
+                    type="text"
+                    id="numeroProtocolo"
+                    placeholder="Digite seu número de protocolo"
+                >
+
+                <p id="mensagemStatus">
+                    Aguardando o grande dia: 13/11/2026
+                </p>
+
+                <div class="contador">
+                    <div>
+                        <span id="diasConquista">0</span>
+                        <p>dias</p>
+                    </div>
+
+                    <div>
+                        <span id="horasConquista">0</span>
+                        <p>horas</p>
+                    </div>
+
+                    <div>
+                        <span id="minutosConquista">0</span>
+                        <p>min</p>
+                    </div>
+
+                    <div>
+                        <span id="segundosConquista">0</span>
+                        <p>seg</p>
+                    </div>
+                </div>
+
+                <div class="botoes-conquista">
+                    <button id="botaoLargada">
+                        🏁 FOI DADA A LARGADA!
+                    </button>
+
+                    <button id="botaoStop" disabled>
+                        🛑 STOP
+                    </button>
+                </div>
+
+                <h3 id="mensagemFinal"></h3>
+
+            </div>
+
         </div>
     </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
