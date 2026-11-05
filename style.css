@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,12 +7,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Container principal */
 .container {
     width: 800px;
+    max-width: 100%;
 }
 
 /* Título */
@@ -19,7 +23,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Botões */
+/* Abas */
 .tabs {
     display: flex;
     background: #1b1e3b;
@@ -29,7 +33,7 @@ h2 {
 
 .tab {
     flex: 1;
-    padding: 15px;
+    padding: 15px 8px;
     background: #1b1e3b;
     border: none;
     color: #aaa;
@@ -53,6 +57,7 @@ h2 {
     padding: 40px;
     border-radius: 0 0 15px 15px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .card h3 {
@@ -64,6 +69,7 @@ h2 {
     color: #00ff88;
     font-size: 14px;
     margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
 /* Contador */
@@ -71,14 +77,131 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .contador span {
     font-size: 60px;
     font-weight: bold;
+    color: white;
+    font-variant-numeric: tabular-nums;
 }
 
 .contador p {
     color: #00ff88;
     margin-top: 5px;
+}
+
+/* PAINEL DA APOSENTADORIA */
+#painelAposentadoria {
+    padding: 10px 0;
+}
+
+#painelAposentadoria h2 {
+    color: #00ff88;
+    font-size: 28px;
+}
+
+#numeroProtocolo {
+    width: 80%;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #00ff88;
+    background: #070816;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#numeroProtocolo::placeholder {
+    color: #888;
+}
+
+/* Mensagem de status */
+#mensagemStatus {
+    color: #00ff88;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+/* Botões da conquista */
+.botoes-conquista {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.botoes-conquista button {
+    padding: 15px 22px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botaoLargada {
+    background: #00ff88;
+    color: #070816;
+}
+
+#botaoLargada:hover:not(:disabled) {
+    background: #00cc70;
+    transform: scale(1.04);
+}
+
+#botaoStop {
+    background: #ff4545;
+    color: white;
+}
+
+#botaoStop:hover:not(:disabled) {
+    background: #cc2222;
+}
+
+.botoes-conquista button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Mensagem final */
+#mensagemFinal {
+    color: #00ff88;
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+/* Adaptação para celular */
+@media (max-width: 600px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .card {
+        padding: 25px 12px;
+    }
+
+    .tab {
+        font-size: 11px;
+        padding: 12px 4px;
+    }
+
+    .contador {
+        gap: 20px;
+    }
+
+    .contador span {
+        font-size: 38px;
+    }
+
+    #painelAposentadoria h2 {
+        font-size: 22px;
+    }
 }
